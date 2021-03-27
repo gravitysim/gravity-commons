@@ -36,6 +36,15 @@ func TestVectorSub(t *testing.T) {
 	}
 }
 
+func TestVectorLength(t *testing.T) {
+	v1 := Vector{X: 3, Y: 4}
+
+	if v1.Length() != 5 {
+		t.Errorf("Invalid length operation\n")
+		return
+	}
+}
+
 func TestVectorSet(t *testing.T) {
 	v1 := Vector{X: 10, Y: 20}
 	v1.Set(4, 6)
