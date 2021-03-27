@@ -62,3 +62,13 @@ func TestVectorClear(t *testing.T) {
 		t.Errorf("Invalid clear operation\n")
 	}
 }
+
+func TestVectorFluent(t *testing.T) {
+	v1 := Vector{X: 10, Y: 20}
+	v2 := Vector{X: 30, Y: 40}
+	v3 := v1.Add(1, 2).AddVector(&v2).Sub(3, 4).SubVector(&v2).Set(5, 6).Clear()
+
+	if &v1 != v3 {
+		t.Errorf("Invalid fluent\n")
+	}
+}

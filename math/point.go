@@ -7,23 +7,31 @@ type Point struct {
 	Y float64
 }
 
-func (r *Point) Add(x, y float64) {
+func (r *Point) Add(x, y float64) *Point {
 	r.X += x
 	r.Y += y
+
+	return r
 }
 
-func (r *Point) Sub(x, y float64) {
+func (r *Point) Sub(x, y float64) *Point {
 	r.X -= x
 	r.Y -= y
+
+	return r
 }
 
-func (r *Point) Set(x, y float64) {
+func (r *Point) Set(x, y float64) *Point {
 	r.X = x
 	r.Y = y
+
+	return r
 }
 
-func (r *Point) Clear() {
+func (r *Point) Clear() *Point {
 	r.Set(0, 0)
+
+	return r
 }
 
 func Distance(p1, p2 *Point) float64 {

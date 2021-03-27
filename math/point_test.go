@@ -37,3 +37,12 @@ func TestPointClear(t *testing.T) {
 		t.Errorf("Invalid clear operation\n")
 	}
 }
+
+func TestPointFluent(t *testing.T) {
+	p := Point{X: 10, Y: 20}
+	p2 := p.Add(1, 2).Sub(3, 4).Set(5, 6).Clear()
+
+	if &p != p2 {
+		t.Errorf("Invalid fluent\n")
+	}
+}
