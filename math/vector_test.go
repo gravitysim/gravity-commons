@@ -2,7 +2,7 @@ package math
 
 import "testing"
 
-func TestAdd(t *testing.T) {
+func TestVectorAdd(t *testing.T) {
 	v1 := Vector{X: 10, Y: 20}
 	v1.Add(5, 6)
 
@@ -19,7 +19,7 @@ func TestAdd(t *testing.T) {
 	}
 }
 
-func TestSub(t *testing.T) {
+func TestVectorSub(t *testing.T) {
 	v1 := Vector{X: 10, Y: 20}
 	v1.Sub(4, 6)
 
@@ -36,7 +36,7 @@ func TestSub(t *testing.T) {
 	}
 }
 
-func TestSet(t *testing.T) {
+func TestVectorSet(t *testing.T) {
 	v1 := Vector{X: 10, Y: 20}
 	v1.Set(4, 6)
 
@@ -45,7 +45,7 @@ func TestSet(t *testing.T) {
 	}
 }
 
-func TestClear(t *testing.T) {
+func TestVectorClear(t *testing.T) {
 	v1 := Vector{X: 10, Y: 20}
 	v1.Clear()
 
