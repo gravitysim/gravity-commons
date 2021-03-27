@@ -44,6 +44,6 @@ func (r *Body) GetDtMassRatio() float64 {
 	return r.dtMassRatio
 }
 
-func (r *Body) setDt(dt float64) {
+func (r *Body) SetDt(dt float64) {
 	r.dtMassRatio = dt / r.mass
 }
