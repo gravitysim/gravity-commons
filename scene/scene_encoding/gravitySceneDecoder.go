@@ -142,10 +142,7 @@ func decodeLink(reader *bufio.Reader, scene *scene.GravityScene) error {
 		return err
 	}
 
-	body1 := scene.GetBodies()[body1Num]
-	body2 := scene.GetBodies()[body2Num]
-	scene.LinkBodies(&body1, &body2)
-
+	scene.LinkBodies(body1Num, body2Num)
 	return nil
 }
 

@@ -49,8 +49,8 @@ func createGravityScene() *scene.GravityScene {
 	gravityScene.AddBody(&b2)
 	gravityScene.AddBody(&b3)
 
-	gravityScene.LinkBodies(&b1, &b2)
-	gravityScene.LinkBodies(&b1, &b3)
+	gravityScene.LinkBodies(0, 1)
+	gravityScene.LinkBodies(0, 2)
 
 	return &gravityScene
 }

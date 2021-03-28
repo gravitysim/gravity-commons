@@ -29,8 +29,8 @@ func (r *GravityScene) AddBody(body *phys.Body) {
 	r.bodies = append(r.bodies, *body)
 }
 
-func (r *GravityScene) LinkBodies(body1, body2 *phys.Body) {
-	r.links = append(r.links, phys.NewBodyLink(body1, body2))
+func (r *GravityScene) LinkBodies(body1Num, body2Num uint64) {
+	r.links = append(r.links, phys.NewBodyLink(&r.bodies[body1Num], &r.bodies[body2Num]))
 }
 
 func (r *GravityScene) GetBodyNum(body *phys.Body) int {
