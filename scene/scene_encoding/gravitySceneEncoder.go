@@ -41,14 +41,14 @@ func encodeHeader(writer *bufio.Writer, header *header) error {
 	return encodeString(writer, header.version)
 }
 
-func encodeBodies(writer *bufio.Writer, bodies []phys.Body) error {
+func encodeBodies(writer *bufio.Writer, bodies []*phys.Body) error {
 	err := binary.Write(writer, endian, uint64(len(bodies)))
 	if err != nil {
 		return err
 	}
 
 	for _, body := range bodies {
-		err = encodeBody(writer, &body)
+		err = encodeBody(writer, body)
 		if err != nil {
 			return err
 		}
